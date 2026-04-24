@@ -1,0 +1,131 @@
+body {
+    background: #020617;
+    font-family: 'Inter', sans-serif;
+    color: #e5e7eb;
+    padding: 30px;
+  }
+  
+  h1 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .card {
+    flex: 1;
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #1f2937;
+  }
+  
+  .card span {
+    font-size: 13px;
+    opacity: 0.6;
+  }
+  
+  .card h2 {
+    margin-top: 5px;
+  }
+  
+  .green {
+    border-left: 4px solid #22c55e;
+  }
+  
+  .red {
+    border-left: 4px solid #ef4444;
+  }
+  
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .map {
+    flex: 2;
+  }
+  
+  .report {
+    flex: 1;
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid #1f2937;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #1f2937;
+    font-size: 14px;
+  }
+  
+  .setor {
+    margin-bottom: 40px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 110px);
+    gap: 25px;
+  }
+  
+  .vaga {
+    width: 110px;
+    height: 70px;
+    border-radius: 12px;
+    border: 2px solid #1f2937;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+  
+  .vaga:hover {
+    transform: scale(1.05);
+  }
+  
+  .livre {
+    border-color: #22c55e;
+    box-shadow: 0 0 10px rgba(34,197,94,0.15);
+  }
+  
+  .ocupada {
+    border-color: #ef4444;
+    box-shadow: 0 0 10px rgba(239,68,68,0.15);
+  }
+  
+  .carro {
+    width: 55px;
+    transition: 0.4s ease;
+  }
+
+  .livre .carro {
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+  
+  .ocupada .carro {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .livre svg {
+    fill: #22c55e;
+  }
+  
+  .ocupada svg {
+    fill: #ef4444;
+  }
