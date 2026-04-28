@@ -36,7 +36,7 @@ let entrada = new Array(20).fill(null);
 
 // SERIAL (ARDUINO)
 const port = new SerialPort({
-    path: '\\\\.\\COM3',
+    path: '\\\\.\\COM5',
     baudRate: 9600
 });
 
