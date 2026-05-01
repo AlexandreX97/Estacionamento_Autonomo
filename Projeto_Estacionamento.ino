@@ -1,5 +1,7 @@
+// CONFIGURAÇÃO
 #define NUM_VAGAS 20
 #define DISTANCIA_OCUPADA 6
+#define AMOSTRAS 3  // quantidade de leituras para média
 
 int trigPins[NUM_VAGAS] = {
   2,4,6,8,10,12,14,48,44,20,
@@ -13,6 +15,9 @@ int echoPins[NUM_VAGAS] = {
 
 bool vagas[NUM_VAGAS];
 
+
+
+// SETUP
 void setup() {
   Serial.begin(9600);
 
@@ -22,25 +27,50 @@ void setup() {
   }
 }
 
-float medir(int trig, int echo){
-  digitalWrite(trig, LOW);
-  delayMicroseconds(2);
-  digitalWrite(trig, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trig, LOW);
+// FUNÇÃO DE MEDIÇÃO COM MÉDIA
+float medirMedia(int trig, int echo){
+  float soma = 0;
 
-  long duracao = pulseIn(echo, HIGH);
-  return duracao * 0.034 / 2;
+  for(int i=0; i<AMOSTRAS; i++){
+    digitalWrite(trig, LOW);
+    delayMicroseconds(2);
+    digitalWrite(trig, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(trig, LOW);
+
+    long duracao = pulseIn(echo, HIGH, 30000); // timeout 30ms
+
+    if(duracao == 0) continue; // ignora erro
+
+    float distancia = duracao * 0.034 / 2;
+    soma += distancia;
+
+    delay(5);
+  }
+
+  return soma / AMOSTRAS;
 }
 
+
+
+// LOOP PRINCIPAL
 void loop() {
 
   Serial.print("{\"vagas\":[");
 
   for(int i=0;i<NUM_VAGAS;i++){
 
-    float d = medir(trigPins[i], echoPins[i]);
-    vagas[i] = (d < DISTANCIA_OCUPADA);
+    float d = medirMedia(trigPins[i], echoPins[i]);
+
+    // DEBUG (opcional)
+    // Serial.print("D"); Serial.print(i); Serial.print(":"); Serial.println(d);
+
+    // lógica de ocupação mais estável
+    if(d > 0 && d < DISTANCIA_OCUPADA){
+      vagas[i] = true;
+    } else {
+      vagas[i] = false;
+    }
 
     Serial.print(vagas[i] ? "true" : "false");
 
