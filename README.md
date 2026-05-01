@@ -82,10 +82,10 @@ Desenvolver um sistema inteligente de monitoramento de estacionamento, integrand
 
 ---
 
-## 👨‍💻 Autores
+## 👨‍💻 Grupo
 
-Alexandre Xisto
-Edilberto de Souza  
-Davi Garcias
-Kauane
-Paulo Cezar
+- Alexandre Xisto
+- Edilberto de Souza  
+- Davi Garcias
+- Kauane
+- Paulo Cezar
