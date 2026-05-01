@@ -82,8 +82,10 @@ Desenvolver um sistema inteligente de monitoramento de estacionamento, integrand
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
+Alexandre Xisto
 Edilberto de Souza  
-Estudante de Sistemas de Informação  
-Desenvolvedor Backend em formação
+Davi Garcias
+Kauane
+Paulo Cezar
