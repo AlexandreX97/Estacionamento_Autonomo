@@ -37,6 +37,7 @@
   <div class="report">
     <h3>Monitoramento</h3>
 
+    <select id="dias"></select>
     <button class="btn-pdf" onclick="gerarPDF()">
   Gerar PDF
 </button>
@@ -47,13 +48,6 @@
 </div>
 
 <script src="app.js"></script>
-
-<!-- SCRIPT DO BOTÃO -->
-<script>
-function gerarPDF() {
-    window.open('/relatorio/pdf', '_blank');
-}
-</script>
 
 </body>
 </html>

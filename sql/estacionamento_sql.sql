@@ -1,6 +1,6 @@
 CREATE DATABASE estacionamento;
 
-USE estacionamento; -- <<< Obrigatório executar
+USE estacionamento;
 
 CREATE TABLE vagas (
     id INT PRIMARY KEY,
@@ -21,14 +21,5 @@ CREATE TABLE logs (
     mensagem TEXT,
     data_log DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
-CREATE OR REPLACE VIEW vagas_mais_usadas AS
-SELECT 
-    vaga_id,
-    COUNT(*) AS total_usos,
-    SUM(tempo_total_segundos) AS tempo_total_segundos
-FROM ocupacao
-WHERE tempo_total_segundos IS NOT NULL
-GROUP BY vaga_id;
 
 SHOW TABLES;

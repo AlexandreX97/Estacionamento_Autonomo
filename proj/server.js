@@ -34,19 +34,43 @@ app.use(express.json());
 
 
 
-// ROTA PARA DOWNLOAD DO PDF
-app.get('/relatorio/pdf', (req, res) => {
+// FILTRO DE DIAS DISPONÍVEIS
+app.get('/relatorio/dias', (req, res) => {
 
     db.query(`
-        SELECT 
-            vaga_id,
-            COUNT(*) AS total_usos,
-            SUM(tempo_total_segundos) AS tempo_total
+        SELECT DISTINCT DATE(data_entrada) AS dia
         FROM ocupacao
-        WHERE tempo_total_segundos IS NOT NULL
-        GROUP BY vaga_id
-        ORDER BY total_usos DESC
+        ORDER BY dia DESC
     `, (err, results) => {
+
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ erro: "Erro ao buscar dias" });
+        }
+
+        res.json(results);
+    });
+});
+
+
+
+// ROTA PARA DOWNLOAD DO PDF
+app.get('/relatorio/pdf/:dia', (req, res) => {
+
+    // PEGA O DIA DA URL
+    const dia = req.params.dia;
+
+    db.query(`
+    SELECT 
+        vaga_id,
+        COUNT(*) AS total_usos,
+        SUM(tempo_total_segundos) AS tempo_total
+    FROM ocupacao
+    WHERE tempo_total_segundos IS NOT NULL
+    AND DATE(data_entrada) = ?
+    GROUP BY vaga_id
+    ORDER BY total_usos DESC
+`, [dia], (err, results) => {
 
         if (err) {
             console.error(err);
@@ -61,14 +85,22 @@ app.get('/relatorio/pdf', (req, res) => {
 
         doc.pipe(res);
 
-        // =====================
         // TÍTULO
-        // =====================
         doc.fontSize(18).text("Relatório de Estacionamento", { align: 'center' });
 
-        // 📅 DATA DE GERAÇÃO (lado direito)
+
+        // DATA DO RELATÓRIO
+        const dataFormatada = new Date(dia + "T00:00:00").toLocaleDateString('pt-BR');
+
+        doc.fontSize(11).text(
+            `Data dos Dados do Relatório: ${dataFormatada}`,
+            { align: 'right' }
+        );
+
+
+        // DATA DE GERAÇÃO
         doc.fontSize(10).text(
-            `Gerado em: ${new Date().toLocaleString()}`,
+            `Relatório Gerado em: ${new Date().toLocaleString('pt-BR')}`,
             { align: 'right' }
         );
 
@@ -76,7 +108,6 @@ app.get('/relatorio/pdf', (req, res) => {
 
 
         // CONFIGURAÇÃO TABELA
-        
         // Largura da tabela
         const pageWidth = doc.page.width;
 
@@ -88,7 +119,7 @@ app.get('/relatorio/pdf', (req, res) => {
         // Largura total da tabela
         const tableWidth = col1 + col2 + col3;
 
-        // 👉 CENTRALIZA A TABELA
+        // CENTRALIZA A TABELA
         const startX = (pageWidth - tableWidth) / 2;
 
         let startY = doc.y;
@@ -147,7 +178,7 @@ let entrada = new Array(20).fill(null);
 
 // SERIAL
 const port = new SerialPort({
-  path: '\\\\.\\COM3',
+  path: '\\\\.\\COM4',
   baudRate: 9600
 });
 

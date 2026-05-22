@@ -80,3 +80,40 @@ ws.onmessage = (event) => {
   document.getElementById("livres").innerText = livres;
   document.getElementById("ocupadas").innerText = ocupadas;
 };
+
+
+// CARREGA DIAS DISPONÍVEIS
+fetch('/relatorio/dias')
+    .then(res => res.json())
+    .then(dias => {
+
+        const select = document.getElementById('dias');
+
+        dias.forEach(d => {
+
+            const option = document.createElement('option');
+
+            option.value = d.dia.split('T')[0];
+            option.textContent = d.dia.split('T')[0];
+
+            select.appendChild(option);
+        });
+    });
+
+
+
+// GERAR PDF
+function gerarPDF() {
+
+    // PEGA O DIA SELECIONADO
+    const dia = document.getElementById('dias').value;
+
+    // VERIFICA SE EXISTE DATA
+    if (!dia) {
+        alert("Selecione uma data");
+        return;
+    }
+
+    // ABRE O PDF FILTRADO
+    window.open(`/relatorio/pdf/${dia}`, '_blank');
+}
