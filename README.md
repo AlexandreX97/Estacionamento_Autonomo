@@ -1,91 +1,27 @@
-# 🚗 Sistema Inteligente de Monitoramento de Vagas
+Estacionamento autônomo desenvolvido para a disciplina de Projeto Interdisciplinar 3.
 
-Sistema desenvolvido para monitoramento de vagas de estacionamento utilizando sensores para detecção de ocupação, armazenamento de histórico em banco de dados e exibição de informações em tempo real via aplicação Web ou App.
+Ferramentas utilizadas:
 
----
+- Componentes Eletrônicos:
+1 Arduino Mega → integração dos componentes;
+20 sensores ultrassônicos HC-SR04 → Coleta dos dados.
 
-## 📖 Sobre o Projeto
+- Linguagens:
+C++ → controle dos sensores;
+HTML/CSS/JavaScript → interface do sistema WEB;
+SQL → armazenamento das informações localmente.
 
-O sistema utiliza sensores para identificar se uma vaga está livre ou ocupada.  
-As informações são enviadas para um backend responsável por:
+- IDEs:
+Arduino IDE;
+Visual Studio Code;
+MySQL Workbench.
 
-- Registrar o status da vaga
-- Armazenar histórico de ocupação
-- Disponibilizar dados em tempo real
-- Gerar relatórios gerenciais
+- Grupo
+Alexandre Xisto;
+Edilberto de Souza; 
+Davi Garcias;
+Kauane Almeida;
+Paulo Cezar.
 
----
-
-## ⚙️ Funcionalidades
-
-✔ Sensores detectam vagas livres/ocupadas  
-✔ Registro de histórico no banco de dados  
-✔ Atualização em tempo real  
-✔ Aplicação Web/App para visualização  
-✔ Geração de relatórios  
-
----
-
-## 📊 Relatórios Implementados
-
-- 📈 Relatório de tempo médio de ocupação por vaga  
-- 📅 Relatório de vagas mais utilizadas  
-- 📊 Histórico de ocupação por período  
-
----
-
-## 🧠 Conceitos Aplicados
-
-- Internet das Coisas (IoT)
-- Integração Hardware + Software
-- Banco de Dados Relacional
-- Manipulação de dados em tempo real
-- Estruturas de Dados
-- Programação Orientada a Objetos
-
----
-
-## 🛠 Tecnologias Utilizadas
-
-- Arduino (sensores ultrassônicos)
-- Java (backend)
-- MySQL (armazenamento de dados)
-- HTML/CSS ou App mobile (interface)
-- Comunicação via Serial ou API
-
----
-
-## 🚀 Funcionamento do Sistema
-
-1. O sensor detecta presença de veículo
-2. O sistema identifica o status da vaga
-3. A informação é enviada ao backend
-4. O banco registra o evento
-5. A aplicação exibe os dados em tempo real
-6. Relatórios podem ser gerados a partir do histórico
-
----
-
-## 🎯 Objetivo
-
-Desenvolver um sistema inteligente de monitoramento de estacionamento, integrando sensores físicos com backend e banco de dados para análise e visualização de dados em tempo real.
-
----
-
-## 🔮 Melhorias Futuras
-
-- Dashboard com gráficos
-- Notificações em tempo real
-- Integração com app mobile
-- Controle de acesso por usuário
-- Hospedagem em nuvem
-
----
-
-## 👨‍💻 Grupo
-
-- Alexandre Xisto
-- Edilberto de Souza  
-- Davi Garcias
-- Kauane
-- Paulo Cezar
+Profesor orientador:
+Luciano Aliprandi
