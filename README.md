@@ -44,6 +44,6 @@ Paulo Cezar.
 
 ---------------------------------------------------------------------------------------
 
-Profesor orientador:
+- Profesor orientador:
 
 Luciano Aliprandi
