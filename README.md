@@ -1,5 +1,7 @@
 Estacionamento autônomo desenvolvido para a disciplina de Projeto Interdisciplinar 3.
 
+---------------------------------------------------------------------------------------
+
 Ferramentas utilizadas:
 
 - Componentes Eletrônicos:
@@ -8,7 +10,7 @@ Ferramentas utilizadas:
 
 20 sensores ultrassônicos HC-SR04 → Coleta dos dados.
 
-
+---------------------------------------------------------------------------------------
 
 - Linguagens:
 
@@ -18,6 +20,7 @@ HTML/CSS/JavaScript → interface do sistema WEB;
 
 SQL → armazenamento das informações localmente.
 
+---------------------------------------------------------------------------------------
 
 - IDEs:
 
@@ -27,6 +30,7 @@ Visual Studio Code;
 
 MySQL Workbench.
 
+---------------------------------------------------------------------------------------
 
 - Grupo
 
@@ -40,6 +44,7 @@ Kauane Almeida;
 
 Paulo Cezar.
 
+---------------------------------------------------------------------------------------
 
 Profesor orientador:
 
