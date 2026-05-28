@@ -34,9 +34,9 @@ MySQL Workbench.
 
 Alexandre Xisto;
 
-Edilberto de Souza; 
-
 Davi Garcias;
+
+Edilberto de Souza; 
 
 Kauane Almeida;
 
