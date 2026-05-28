@@ -8,6 +8,7 @@ Ferramentas utilizadas:
 
 20 sensores ultrassônicos HC-SR04 → Coleta dos dados.
 
+
 - Linguagens:
 
 C++ → controle dos sensores;
@@ -16,6 +17,7 @@ HTML/CSS/JavaScript → interface do sistema WEB;
 
 SQL → armazenamento das informações localmente.
 
+
 - IDEs:
 
 Arduino IDE;
@@ -23,6 +25,7 @@ Arduino IDE;
 Visual Studio Code;
 
 MySQL Workbench.
+
 
 - Grupo
 
@@ -35,6 +38,7 @@ Davi Garcias;
 Kauane Almeida;
 
 Paulo Cezar.
+
 
 Profesor orientador:
 
