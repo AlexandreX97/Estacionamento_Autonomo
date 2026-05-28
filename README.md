@@ -2,8 +2,6 @@ Estacionamento autônomo com 20 vagas desenvolvido para a disciplina de Projeto 
 
 ---------------------------------------------------------------------------------------
 
-Ferramentas utilizadas:
-
 - Componentes Eletrônicos:
 
 1 Arduino Mega → integração dos componentes;
