@@ -1,4 +1,4 @@
-Estacionamento autônomo desenvolvido para a disciplina de Projeto Interdisciplinar 3.
+Estacionamento autônomo com 20 vagas desenvolvido para a disciplina de Projeto Interdisciplinar 3.
 
 ---------------------------------------------------------------------------------------
 
