@@ -9,6 +9,7 @@ Ferramentas utilizadas:
 20 sensores ultrassônicos HC-SR04 → Coleta dos dados.
 
 
+
 - Linguagens:
 
 C++ → controle dos sensores;
