@@ -4,43 +4,43 @@ Estacionamento autônomo com 20 vagas desenvolvido para a disciplina de Projeto 
 
 - Componentes Eletrônicos:
 
-1 Arduino Mega → integração dos componentes;
+1 Arduino Mega → integração dos componentes
 
-20 sensores ultrassônicos HC-SR04 → Coleta dos dados.
+20 sensores ultrassônicos HC-SR04 → Coleta dos dados
 
 ---------------------------------------------------------------------------------------
 
 - Linguagens:
 
-C++ → controle dos sensores;
+C++ → controle dos sensores
 
-HTML/CSS/JavaScript → interface do sistema WEB;
+HTML/CSS/JavaScript → interface do sistema WEB
 
-SQL → armazenamento das informações localmente.
+SQL → armazenamento das informações localmente
 
 ---------------------------------------------------------------------------------------
 
 - IDEs:
 
-Arduino IDE;
+Arduino IDE
 
-Visual Studio Code;
+Visual Studio Code
 
-MySQL Workbench.
+MySQL Workbench
 
 ---------------------------------------------------------------------------------------
 
 - Grupo
 
-Alexandre Xisto;
+Alexandre Xisto
 
-Davi Garcias;
+Davi Garcias
 
-Edilberto de Souza; 
+Edilberto de Souza;
 
-Kauane Almeida;
+Kauane Almeida
 
-Paulo Cezar.
+Paulo Cezar
 
 ---------------------------------------------------------------------------------------
 
