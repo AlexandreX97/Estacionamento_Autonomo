@@ -36,7 +36,7 @@ Alexandre Xisto
 
 Davi Garcias
 
-Edilberto de Souza;
+Edilberto de Souza
 
 Kauane Almeida
 
